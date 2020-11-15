@@ -4,11 +4,28 @@
 where players can write code to manipulate the game economy and Minecraft world
 (with tight security permissions).
 
-## Code environment setup
+## Create a private fork of this starter
+1. Go to https://github.com/new/import
+2. Fill out the input fields (see image below for example)
+
+<img src="./tools/github-new-import.png" width="50%" alt="Creating a private fork https://github.com/new/import">
+
+## GitHub codespaces setup (easy development in the browser)
+1. Join the beta of GitHub codepsaces: https://github.com/features/codespaces
+2. Receive access to the beta
+3. Create a private fork
+4. Go to https://github.com/codespaces and click on `New codespace`
+5. Select your private fork
+6. In the terminal on the bottom half of the screen, run the terminal command `./installDependencies.sh`
+
+## Code environment setup (local development)
+If you are on Windows, you first need to install Git Bash and [Chocolatey](https://chocolatey.org/). Alternatively, you can use codespaces for easy setup.
+
 1. Install `deno`: https://deno.land/manual/getting_started/installation
 2. (on VS Code) Install the deno VS Code extension: https://marketplace.visualstudio.com/items?itemName=denoland.vscode-deno
-3. (optional but recommended) Install [Node.js stable via Node Version Manager](https://github.com/nvm-sh/nvm), and then install nodemon using the command `npm install nodemon`
-4. Clone this repository into your own (recommended private) repository
+3. (optional but recommended) Install [Node Version Manager](https://github.com/nvm-sh/nvm), open a new terminal, and run `nvm install stable` to install the latest Node.js
+4. In your terminal, run the command `./installDependencies.sh`
+5. Clone this repository into your own (recommended private) repository
 
 ## In-game setup
 1. Go to the DMV near spawn and buy an `Articles of Incorporation`
