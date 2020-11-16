@@ -51,12 +51,12 @@ There are three sources of reference to you as a smart contract developer:
 - [`scapi/scioTypes.ts`](https://github.com/smartcraftio/smartcraft-starter/blob/master/scapi/scioTypes.ts): contains all the typescript types used in events as well as the source to `this.API` (do not make changes to this, it will not get uploaded)
 - [`scapi/ContractBase.ts`](https://github.com/smartcraftio/smartcraft-starter/blob/master/scapi/ContractBase.ts): the abstract class that your contract is based off (do not make changes to this, it will not get uploaded)
 
-## Updating your forked repository (via Git rebase)
+## Updating your forked repository (via the mergeUpdates.sh)
 1. Save and commit all your changes locally.
-2. Run the update script using the command `./rebaseUpdates.sh`
+2. Run the update script using the command `./mergeUpdates.sh` (which will perform a git merge with this public repository)
 3. Fix any git merge conflicts that exist. To do this, use the git tools on the sidebar.
 4. Use `git add` on all the files that you fixed merge conflicts on (if any)
-5. If you are in the interactive rebase state, use `git rebase --continue` to continue, or `git rebase --abort` to undo the whole rebase process.
+5. If you are in the interactive rebase state, use `git merge --continue` to continue, or `git merge --abort` to undo the whole merge process.
 
 ## Closed source components
 Currently, it is only possible to test in production because the
