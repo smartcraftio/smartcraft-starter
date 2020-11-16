@@ -140,7 +140,7 @@ export class SCWorkerRuntime<T extends typeof ContractBase> {
 
             const errorEffect: scio.MinecraftBroadcastEffect = {
               type: "MinecraftBroadcastEffect",
-              message: `${scio.ChatColor.RED}${betterStackTrace}`,
+              message: `${scio.ChatColor.RED}${bst}`,
             };
             const errorcwm: scio.ContractWorkerMessage = {
               result: {
@@ -171,19 +171,19 @@ export class SCWorkerRuntime<T extends typeof ContractBase> {
 
 function betterStackTrace(stack: string, importMeta: any) {
   // Perform some filtering to make the stack trace pretty
-  let betterStackTrace: string = stack;
+  let bst: string = stack;
   const contractFilenamePrefix = new URL(".", importMeta.url).href;
-  betterStackTrace = betterStackTrace.replaceAll(
+  bst = bst.replaceAll(
     contractFilenamePrefix,
     "",
   );
   const runtimeFilenamePrefix = new URL(".", import.meta.url).href;
-  betterStackTrace = betterStackTrace.replaceAll(
+  bst = bst.replaceAll(
     runtimeFilenamePrefix,
     "",
   );
 
-  let bstLines = betterStackTrace.split("\n");
+  let bstLines = bst.split("\n");
   let filteredLines = [];
   for (let index in bstLines) {
     if (
@@ -206,6 +206,6 @@ function betterStackTrace(stack: string, importMeta: any) {
     }
   }
 
-  betterStackTrace = filteredLines.join("\n");
-  return betterStackTrace;
+  bst = filteredLines.join("\n");
+  return bst;
 }
